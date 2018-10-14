@@ -15,6 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 	    }
 	    
 	    @RequestMapping(path="/customers", method= RequestMethod.GET)
+	    public long getCustomer(@RequestBody testArg customer){
+			return customer.getCustomerId();
+	    }
+		
+	    @RequestMapping(path="/customers", method= RequestMethod.POST)
 	    public long postCustomer(@RequestBody testArg customer){
 			return customer.getCustomerId();
 	    }
